@@ -1,12 +1,13 @@
 import pickle
 from flask import Flask, request, send_file, render_template
 import openai
-import elevenlabs
+from elevenlabs.client import ElevenLabs
+client = ElevenLabs(api_key="sk_6ef60c6acf145a83c8d06bfd1fa294afd3278b9172813d7c")
 
 app = Flask(__name__)
 
-API_KEY = "Your code here"  # Eleven labs
-OPENAI_API_KEY = "Your code here"
+API_KEY = "sk_6ef60c6acf145a83c8d06bfd1fa294afd3278b9172813d7c"  # Eleven labs
+OPENAI_API_KEY = "sk-proj-bGR6GSiT1p1LtejwPXpZT3BlbkFJaZakQWvHvTW8ha7FKGQT"
 MODEL_NAME = "gpt-3.5-turbo"
 VOICE_PICKLE_FILE = 'voice.pickle'
 RESPONSE_AUDIO_FILE = 'response_elevenlabs.mp3'
@@ -14,7 +15,10 @@ messages = [{"role": "system", "content": "Your initial prompt here"}]
 
 def get_voice_from_pickle(file_path):
     # Loads and returns a voice object from a pickle file
-    # Your code here
+    # Loads and returns a voice object from a pickle file
+    with open(file_path, 'rb') as f:
+        voice = pickle.load(f)
+    return voice
 
 def get_response_text_from_model(messages):
     # Sends the messages to the OpenAI model and returns the generated response
