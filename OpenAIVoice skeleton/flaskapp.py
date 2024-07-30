@@ -2,12 +2,12 @@ import pickle
 from flask import Flask, request, send_file, render_template
 import openai
 from elevenlabs.client import ElevenLabs
-client = ElevenLabs(api_key="sk_6ef60c6acf145a83c8d06bfd1fa294afd3278b9172813d7c")
+client = ElevenLabs(api_key="sk_a32d218a5e81ca0adf3a48cdda41fa1a69542ac1fd3c5f4e")
 
 app = Flask(__name__)
 
-API_KEY = "sk_6ef60c6acf145a83c8d06bfd1fa294afd3278b9172813d7c"  # Eleven labs
-OPENAI_API_KEY = "sk-proj-bGR6GSiT1p1LtejwPXpZT3BlbkFJaZakQWvHvTW8ha7FKGQT"
+API_KEY = "sk_a32d218a5e81ca0adf3a48cdda41fa1a69542ac1fd3c5f4e"  # Eleven labs
+OPENAI_API_KEY = "sk-proj-eemB3b2Ka7uQcUO4VUGsT3BlbkFJo9H3ToC1Hxyw0P2TDVMk"
 MODEL_NAME = "gpt-3.5-turbo"
 VOICE_PICKLE_FILE = 'voice.pickle'
 RESPONSE_AUDIO_FILE = 'response_elevenlabs.mp3'
