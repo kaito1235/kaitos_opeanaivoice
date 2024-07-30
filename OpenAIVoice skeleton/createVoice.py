@@ -1,6 +1,6 @@
 import pickle
 from elevenlabs.client import ElevenLabs
-client = ElevenLabs(api_key="sk_6ef60c6acf145a83c8d06bfd1fa294afd3278b9172813d7c")
+client = ElevenLabs(api_key="sk_a32d218a5e81ca0adf3a48cdda41fa1a69542ac1fd3c5f4e")
 
 try:
    with open('voice.pickle', 'rb') as f:
