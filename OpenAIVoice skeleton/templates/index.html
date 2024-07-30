@@ -1,17 +1,38 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Audio Response Generator" />
-    <title># Your title here</title>
-    <link rel="stylesheet" href="" />
-    <!-- In href, connect to CSS using url_for -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaito's Voice Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
     <script src="{{ url_for('static', filename='main.js') }}" defer></script>
-    <!-- In script, connect to Javascript using url_for -->
-  </head>
-  <body>
-    <h1># Your header here</h1>
-    <!-- Add a message form and audio player below -->
-  </body>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Kaito's Voice Assistant</a>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Voice Assistant</a>
+        </nav>
+    </header>
+
+    <div class="center-content">
+        <div class="center-text">Please Enter Text Below</div>
+
+        <div class="center-form">
+            <form action="/" method="POST">
+                <label for="freeform"></label>
+                <textarea id="freeform" name="freeform" placeholder="Enter text here..."></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <audio id="voice-assistant" controls>
+            <source src="/media/" type="audio/mpeg">
+            <source src="/media/" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</body>
 </html>
