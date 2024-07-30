@@ -64,7 +64,7 @@ def write_audio_to_file(response_text, voice, file_path):
 @app.route('/')
 def home():
     # Returns the homepage
-    # Your code here
+    return render_template('home.html')
 
 @app.route('/message', methods=['POST'])
 def process_message():
