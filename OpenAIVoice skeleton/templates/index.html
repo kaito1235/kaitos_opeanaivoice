@@ -12,7 +12,6 @@
         <a href="#" class="logo">Kaito's Voice Assistant</a>
         <nav class="navbar">
             <a href="/">Home</a>
-            
             <a href="#">About</a>
             <a href="/message">Voice Assistant</a>
         </nav>
@@ -22,18 +21,14 @@
         <div class="center-text">Please Enter Text Below</div>
 
         <div class="center-form">
-            <form action="/" method="POST">
-                <label for="freeform"></label>
-                <textarea id="freeform" name="freeform" placeholder="Enter text here..."></textarea>
+            <form id="messageForm">
+                <label for="message"></label>
+                <textarea id="message" name="message" placeholder="Enter text here..."></textarea>
                 <button type="submit">Submit</button>
             </form>
         </div>
 
-        <audio id="voice-assistant" controls>
-            <source src="/media/" type="audio/mpeg">
-            <source src="/media/" type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
+        <audio id="audioPlayer" controls></audio>
     </div>
 </body>
 </html>
