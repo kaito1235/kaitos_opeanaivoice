@@ -71,6 +71,7 @@ def process_message():
     
     return send_file(RESPONSE_AUDIO_FILE, mimetype='audio/mp3')
 
+
 def main():
     openai.api_key = OPENAI_API_KEY
     app.run(host='0.0.0.0', port=5001, debug=True)
