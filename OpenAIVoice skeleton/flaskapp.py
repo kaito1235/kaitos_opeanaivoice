@@ -25,9 +25,10 @@ def get_voice_from_pickle(file_path):
     try:
         with open(file_path, 'rb') as f:
             voice = pickle.load(f)
-        return voice
+            return voice
     except FileNotFoundError:
-        return "Default Voice"  # Fallback to a default voice if pickle file not found
+        # Raise a specific exception or return a clear error message
+        raise ValueError("Voice pickle file not found. Please provide a valid voice ID.")
 
 def get_response_text_from_model(messages):
     try:
@@ -64,7 +65,7 @@ def process_message():
 
         messages.append({"role": "user", "content": user_message})
         response_text = get_response_text_from_model(messages)
-
+        
         voice = get_voice_from_pickle("voice.pickle")
         write_audio_to_file(response_text, voice, "response_elevenlabs.mp3")
 
