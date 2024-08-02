@@ -9,25 +9,22 @@
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">Kaito's Voice Assistant</a>
+        <a href="#" class="logo">Kaito's voice assistant</a>
         <nav class="navbar">
             <a href="/">Home</a>
             <a href="/about">About</a>
             <a href="/message">Voice Assistant</a>
         </nav>
     </header>
-
     <div class="center-content">
         <div class="center-text">Please Enter Text Below</div>
-
         <div class="center-form">
-            <form id="messageForm">
+            <form method="POST" id="messageForm">
                 <label for="message"></label>
                 <textarea id="message" name="message" placeholder="Enter text here..."></textarea>
                 <button type="submit">Submit</button>
             </form>
         </div>
-
         <audio id="audioPlayer" controls></audio>
     </div>
 </body>
