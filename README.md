@@ -1,1 +1,1 @@
-# kaitos_opeanaivoice
+This Flask-based web application integrates OpenAI and ElevenLabs to offer a voice cloning experience. Users can input text, and the application will generate a voiced reply that mimics a specified voice. Using Flask as the web framework, OpenAI for natural language processing, and ElevenLabs for high-quality voice synthesis, this app demonstrates the seamless combination of AI for an interactive, responsive audio experience.
